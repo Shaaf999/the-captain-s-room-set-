@@ -1,0 +1,15 @@
+k=int(input()) # size of total group (k!=1 except for captain)
+rooms=list(map(int,input().split())) #---> unordered room numbers
+a=set()  #empty set # no values
+b=set()
+for room in rooms:
+    if room not in a: #obviously room not in a as it is a empty set
+    # to add room numbers in empty set a and b
+    # and discard repeated rooms in b to find captain's room as k=1 for his room
+        a.add(room)  # add all room numbers as it is in input --> rooms
+        b.add(room)  #same
+    else:
+        b.discard(room)  (discard repeated room numbers... captain's room found as it is only one)
+b=list(b)        
+print(b[0])          
+        
